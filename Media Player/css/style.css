@@ -1,0 +1,135 @@
+body{
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    background-size: cover;
+    background-color: #cccccc;
+    background-color: rgb(36, 36, 36);
+    /* background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%); */
+}
+.music{
+    width: 80%;
+    height: 100px;
+    background-color: #9e8d8d;
+    /* position: relative; */
+    /* margin: 200px auto; */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    padding: 50px;
+    position: absolute;
+    bottom: 50px;
+}
+.controls{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+.controlBtn{
+    color: #f1e3e3;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+    display: inline;
+    margin-right: 20px;
+}
+.controlBtn:hover{
+    color: #111111;
+}
+abbr{
+    border-bottom: none !important;
+    cursor: inherit !important;
+    text-decoration: none !important;
+}
+.soundProgress,
+#volumeBtn{
+    display: inline;
+}
+.soundProgress{
+    padding-left: 100px;
+}
+#curTime,
+#durationTime,
+#soundVal{
+    color: #f1e3e3;
+    font-size: 25px;
+}
+#durationTime{
+    float: right;
+}
+
+.timeProgress #progress{
+    width:100%;
+    background:white;
+    height:25px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.timeProgress #audio_range{
+    width: 0px;
+    background:#c93636;
+    background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%);
+    height:25px;
+    border-radius: 10px;
+}
+#restart{
+    float: left;
+}
+
+#soundRange{
+    cursor: pointer;
+    background: linear-gradient(to right, #82CFD0 0%, #82CFD0 50%, #fff 50%, #fff 100%);
+    width: 100px;
+    outline: none;
+    /* transition: background 450ms ease-in;
+    -webkit-appearance: none; */
+}
+
+@media only screen and (max-width: 992px){
+    .soundProgress{
+        padding-left: 0px;
+    }
+}
+@media only screen and (max-width: 767px){
+    .controlBtn{
+        margin-right: 10px;
+    }
+    #backward, 
+    #forward{
+        display: none;
+    }
+    .soundProgress #soundrange{
+        width: 70px;
+    }
+    .soundProgress #soundVal{
+        display: none;
+    }
+}
+@media only screen and (max-width: 640px){
+    .controls{
+        text-align: justify;
+    }
+    .controlBtn{
+        margin-right: 1em;
+    }
+}
+@media only screen and (max-width: 585px){
+    .controlBtn{
+        margin-right: 0.7em;
+    }
+    .music{
+        padding: 30px;
+    }
+    #soundRange{
+        width: 70px;
+    }
+    #volumeBtn{
+        margin-right: 0px;
+    }
+}
+@media only screen and (max-width: 470px){
+    .controlBtn{
+        margin-right: 0.3em;
+    }
+
+}

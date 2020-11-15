@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Audio Player</title>
+</head>
+<body>
+    <div class="music">
+        <div class="musicName"></div>
+
+        <div class="timeProgress">
+            <span id="curTime"></span>
+            <span id="durationTime"></span>
+            <input style="width: 100%;" type="range" min="0" max="100" value="0" 
+                            id="timeRange" step="0.1" >
+            <!-- <div id="progress">
+                <div id="audio_range"></div>
+           </div> -->
+        </div>
+
+
+        <div class="controls">
+            <abbr title="Restart">
+                <div id="restart" class="controlBtn"><i class="fas fa-redo"></i></div>
+            </abbr>
+            <abbr title="Loop">
+                <div id="redo" class="controlBtn"><i class="fas fa-sync-alt"></i>
+                </div>
+            </abbr>
+            <abbr title="Previous">
+                <div id="previous" class="controlBtn"><i class="fa fa-step-backward"></i></div>
+            </abbr>
+            <abbr title="-10secs">
+                <div id="backward" class="controlBtn"><i class="fa fa-backward"></i></div>
+            </abbr>
+            <abbr title="Play/Pause">
+                <div id="play" class="controlBtn"> <i class="fa fa-play"></i> </div>
+            </abbr>
+            <abbr title="+10secs">
+                <div id="forward" class="controlBtn"> <i class="fa fa-forward"></i></div>
+            </abbr>
+            <abbr title="Next">
+                <div id="next" class="controlBtn"> <i class="fa fa-step-forward"></i></div>
+            </abbr>
+            <abbr title="Shuffle">
+                <div id="shuffle" class="controlBtn"><i class="fa fa-random"></i></div>
+            </abbr>
+            
+            <div class="soundProgress">
+                <div id="volumeBtn" class="controlBtn" onclick="soundTurn()">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+                <input type="range" min="0" max="100" value="100" id="soundRange" oninput="soundChange()">
+                <output id="soundVal"> </output>
+            </div>
+        </div> 
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
